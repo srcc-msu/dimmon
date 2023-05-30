@@ -1,0 +1,4 @@
+- Add checking on received data by default in net/ip/recv
+- Add repository of all sensor id
+- Fix cpuload sensor for disabling and enablng CPU cores
+- Make centralized view of current time for the whole wave

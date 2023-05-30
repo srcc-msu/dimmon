@@ -1,0 +1,12 @@
+This directory is for external dependendencies. As of now they are managed by git-subtree.
+
+To import a new dependency with git subtree use a command like
+git subtree add --prefix=vendor/luaposix https://github.com/luaposix/luaposix.git v36.1 --squash
+v36.1 here is a tag
+
+TBD: manage external dependencies with something like git-vendor.
+
+P.S. git vendor github page is https://github.com/brettlangdon/git-vendor but as it sees to be
+abandoned, maybe https://github.com/Tyrben/git-vendor should be used or even
+create own fork to allow for several versions of the same repository to be vendored (we
+need this for PAPI in lomonosov-2)

@@ -1,0 +1,7 @@
+TOPDIR ?= ../..
+export TOPDIR
+
+MODULE = module_wrong_abi
+SRCS = module_wrong_abi.c
+
+include $(TOPDIR)/dmm.module.mk

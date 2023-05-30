@@ -1,0 +1,7 @@
+TOPDIR ?= ../..
+export TOPDIR
+
+MODULE = module_two_types
+SRCS = module_two_types.c
+
+include $(TOPDIR)/dmm.module.mk

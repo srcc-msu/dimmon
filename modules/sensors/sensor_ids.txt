@@ -1,0 +1,90 @@
+This file is an list of sensor IDs for sensor modules.
+
+cpuload sensor
+
+CPU_USER        500     float
+CPU_NICE        501     float
+CPU_SYSTEM      502     float
+CPU_IDLE        503     float
+CPU_IOWAIT      504     float
+CPU_IRQ         505     float
+CPU_SOFTIRQ     506     float
+CPU_STEAL       507     float
+CPU_GUEST       508     float
+CPU_GUEST_NICE  509     float
+
+meminfo sensor
+
+MemTotal            520 uint64_t
+MemFree             521 uint64_t
+MemAvailable        522 uint64_t
+Buffers             523 uint64_t
+Cached              524 uint64_t
+SwapCached          525 uint64_t
+Active              526 uint64_t
+Inactive            527 uint64_t
+Active(anon)        528 uint64_t
+Inactive(anon)      529 uint64_t
+Active(file)        530 uint64_t
+Inactive(file)      531 uint64_t
+Unevictable         532 uint64_t
+Mlocked             533 uint64_t
+SwapTotal           534 uint64_t
+SwapFree            535 uint64_t
+Dirty               536 uint64_t
+Writeback           537 uint64_t
+AnonPages           538 uint64_t
+Mapped              539 uint64_t
+Shmem               540 uint64_t
+Slab                541 uint64_t
+SReclaimable        542 uint64_t
+SUnreclaim          543 uint64_t
+KernelStack         544 uint64_t
+PageTables          545 uint64_t
+NFS_Unstable        546 uint64_t
+Bounce              547 uint64_t
+WritebackTmp        548 uint64_t
+CommitLimit         549 uint64_t
+Committed_AS        550 uint64_t
+VmallocTotal        551 uint64_t
+VmallocUsed         552 uint64_t
+VmallocChunk        553 uint64_t
+HardwareCorrupted   554 uint64_t
+AnonHugePages       555 uint64_t
+CmaTotal            556 uint64_t
+CmaFree             557 uint64_t
+HugePages_Total     558 uint64_t
+HugePages_Free      559 uint64_t
+HugePages_Rsvd      560 uint64_t
+HugePages_Surp      561 uint64_t
+Hugepagesize        562 uint64_t
+DirectMap4k         563 uint64_t
+DirectMap2M         564 uint64_t
+
+ifdata sensor
+IFBYTESIN           100
+IFPACKETSIN         101
+IFBYTESOUT          102
+IFPACKETSOUT        103
+
+derivative (' - derivative)
+IFBYTESIN'           110
+IFPACKETSIN'         111
+IFBYTESOUT'          112
+IFPACKETSOUT'        113
+
+aggregateall
+IFBYTESIN'(110)     120
+IFPACKETSIN'(111)   121
+IFBYTESOUT'(112)    122
+IFPACKETSOUT'(113)  123
+CPU_USER(500)       800
+CPU_NICE(501)       801
+CPU_SYSTEM(502)     802
+CPU_IDLE(503)       803
+CPU_IOWAIT(504)     804
+CPU_IRQ(505)        805
+CPU_SOFTIRQ(506)    806
+CPU_STEAL(507)      807
+CPU_GUEST(508)      808
+CPU_GUEST_NICE(509) 809

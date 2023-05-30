@@ -1,0 +1,103 @@
+Version 0.18 (2011-11-09);
+- Do not print "No errors to report" with edac-util --quiet
+- Add DIMM labels for Intel S2600JF and Supermicro H8QG6
+
+Version 0.17 (2010-02-10);
+- Fix memory leaks in libedac and edac-util(1).
+
+Version 0.16.1 (2009-01-30);
+ - Fix libedac.so library version, which should not have gone
+    backwards.
+
+Version 0.16 (20080-12-31);
+ - Fix out-of-tree builds of edac-utils.
+ - Support up to 6 channels with edac-utils and libedac. Applications
+    directly linked to libedac will need to be recompiled to take advantage
+    of this change.
+ - Add DIMM labels for ASUSTeK Computer INC. M3A32-MVP DELUXE.
+
+version 0.15 (2008-09-22):
+ - DIMM label information may now be stored in separate files
+   under a labels.d directory (e.g. /etc/edac/labels.d/*), in addition
+   to the labels.db file.
+ - Preferentially read mainboard information from sysfs if available.
+ - Don't parse dmidecode "System information" section, use 
+   "Board Information" instead.
+
+version 0.14 (2008-05-30):
+ - Fix typos in edac-util(1) man page.
+ - Remove any extra newlines on EDAC DIMM labels.
+ - Add Supermicro H8DA3-2 DIMM labels to label db.
+
+version 0.13 (2008-02-26):
+ - Abandon use of udev rules to load EDAC DIMM labels. Most often
+   the udev rules were called too early in boot to be effective.
+ - Reinstate load of DIMM labels in EDAC init script.
+
+version 0.12 (2008-02-08):
+ - The edac-ctl script is no longer responsible for the load and unload
+   of EDAC drivers. The drivers will automatically be loaded in most
+   current distributions. 
+ - The "edac" init script no longer does anything unless EDAC_DRIVER
+   is set in /etc/sysconfig/edac (or equivalent). Set EDAC_DRIVER to the
+   driver name to load if drivers aren't being automatically loaded.
+ - DIMM labels are now automatically registered at driver load time
+   through a udev rule installed by edac-utils.
+
+version 0.11 (2007-11-06):
+ - Fix for edac-ctl parsing of 'lspci -n' output in lspci 2.2.3.
+ - Add labels for Dell PowerEdge 1850 and AsusTek A85NX, A8N-E, and KFN5-D SLI.
+ - Removed debian directory from repository
+	
+version 0.10 (2007-06-29):
+ - Allow for whitespace in motherboard vendor and model name in labels.db.
+ - Allow for empty DIMM labels in edac-ctl --print-labels.
+ - Properly substitute ./configure parameters (e.g. sysconfdir)
+   in final edac.init (init script) and edac-ctl scripts.
+ - Find locations of utilities used by edac-ctl at runtime.
+
+version 0.9 (2007-05-08):
+ - Add manpages for edac-util(1), edac-ctl(8), and edac(3). 
+
+version 0.8 (2007-04-25):
+ - Issue edac-util "No errors to report" message to stdout not stderr.
+
+version 0.7 (2007-04-18):
+ - Change default output of edac-util to better identify any failing DIMM(s).
+    Previous default output can be obtained with --report=simple.
+ - Fix edac-util --report=full output to include error counts not associated
+    with a DIMM (so-called "noinfo" error counts).
+ - Update Supermicro H8QM8 labels.
+ - edac-ctl --print-labels now shows registered labels (in sysfs) alongside 
+    configured labels (from labels.db).
+
+version 0.6 (2007-03-15):
+ - Add Supermicro H8QM8 to distributed DIMM labels database.
+ - Don't warn about sysfs files that don't exist when registering DIMM labels.
+   This is probably just unpopulated memory banks on motherboard.
+	
+version 0.5 (2006-10-13):
+ - Add Supermicro H8DCE to distributed DIMM labels database.
+ - Fix labels.db parsing to allow single <mc.row.chan> after each DIMM label.
+ - Allow edac-ctl --mainboard= to accept "vendor model" as well as 
+   "vendor:model" when explicitly specifying mainboard information.
+
+Version 0.4 (2006-05-10):
+ - Allow motherboard vendor string to have whitespace.
+ - Fix dmidecode parsing to strip whitespace from end of strings.
+ - Add Tyan S2895 motherboard DIMM labels to labels database.
+ - Support for sysfsutils-2.0.0.
+ - Fix edac-util -r to allow optional argument.
+
+Version 0.3 (2006-03-21):
+ - Fix permissions in specfile.
+ - Omit warnings when reads fail from EDAC sysfs files.
+ - Fix possible hang in edac-ctl when registering dimm labels.
+  
+
+Version 0.2 (2006-03-16):
+ - Fixed edac-ctl bug in --register-labels.
+ - Print error in edac-util --report if no memory controllers are found.
+
+Version 0.1 (2006-03-14):
+ - Initial release.

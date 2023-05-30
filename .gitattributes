@@ -1,0 +1,2 @@
+Makefile        whitespace=trailing-space,space-before-tab,blank-at-eol
+*.mk            whitespace=trailing-space,space-before-tab,blank-at-eol

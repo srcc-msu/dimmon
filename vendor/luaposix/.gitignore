@@ -1,0 +1,11 @@
+*~
+*.o
+*.so
+*.src.rock
+/ChangeLog
+/COPYING
+/Makefile
+/build-aux/config.ld
+/lib/posix/version.lua
+/luaposix-*.tar.gz
+/TAGS
