@@ -29,3 +29,7 @@ Lomonosov Moscow State University.
 
 This software includes portions of other software which is Copyright by their
 respective copyright holders. See COPYRIGHTS/README.md for details.
+
+This software is bundled with other software packages whish are Copyright by
+their respective copyright holders and have thier own licenses. These packages
+are in vendor directory, see there.
